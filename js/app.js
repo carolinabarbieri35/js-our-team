@@ -39,4 +39,35 @@ const teamMembers = [
     }
 ];
 
-console.log(teamMembers);
+const teamListEl = document.querySelector('.team-list');
+
+teamMembers.forEach(member => {
+    const { name, role, email, img } = member;
+
+
+
+    const card = ` <li class="col-12 col-md-6 col-lg-4">
+                        <div class="card shadow-sm h-100 overflow-hidden">
+                            <div class="row g-0 h-100 align-items-center">
+                        <div class="col-4 h-100">
+            <img 
+              src="./${img}" 
+              class="img-fluid h-100 w-100 object-fit-cover" 
+              alt="Ritratto di ${name}">
+          </div>
+          <div class="col-8">
+                        <div class="card-body">
+                            <h2 class="h5 card-title mb-1 fw-bold">${name}</h2>
+                            <p class="card-text text-primary small fw-semibold mb-0">${role}
+                                        </p>
+                            <a href="mailto:${name}@team.com"
+                            class="text-secondary small text-decoration-none d-inline-block">
+                                            ${email}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`
+
+    teamListEl.innerHTML += card;
+});
