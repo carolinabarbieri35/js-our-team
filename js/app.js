@@ -47,7 +47,7 @@ teamMembers.forEach(member => {
 
 
     const card = ` <li class="col-12 col-md-6 col-lg-4">
-                        <div class="card shadow-sm h-100 overflow-hidden">
+                        <div class="card shadow-sm h-100 overflow-hidden bg-black">
                             <div class="row g-0 h-100 align-items-center">
                         <div class="col-4 h-100">
             <img 
@@ -57,11 +57,11 @@ teamMembers.forEach(member => {
           </div>
           <div class="col-8">
                         <div class="card-body">
-                            <h2 class="h5 card-title mb-1 fw-bold">${name}</h2>
-                            <p class="card-text text-primary small fw-semibold mb-0">${role}
+                            <h2 class="h5 card-title mb-1 fw-bold text-white text-uppercase">${name}</h2>
+                            <p class="card-text text-white small fw-semibold mb-0">${role}
                                         </p>
                             <a href="mailto:${name}@team.com"
-                            class="text-secondary small text-decoration-none d-inline-block">
+                            class="text-info small text-decoration-none d-inline-block">
                                             ${email}
                                         </a>
                                     </div>
